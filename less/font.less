@@ -1,0 +1,14 @@
+// @import './params';
+
+
+.loopCreateFontSize(@from, @to) when (@from =< @to) {
+  @res: @from *1;
+
+  .fz@{res} {
+    font-size: @from * 1px;
+  }
+
+  .loopCreateFontSize((@from + 1), @to);
+}
+
+.loopCreateFontSize(12, 32);

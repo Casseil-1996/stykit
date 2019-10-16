@@ -1,0 +1,104 @@
+
+.loopCreate(@from, @to, @step: 1) when (@from =< @to) {
+  @res: @from * 10;
+
+  .w-@{from},
+  .w@{res} {
+    width: (@from * @unit);
+  }
+
+  .h-@{from},
+  .h@{res} {
+    height: (@from * @unit);
+  }
+
+  .loopCreate((@from + @step), @to, @step);
+}
+
+.loopCreateUnit(@from: 5) when (@from =< 100) {
+
+  .w@{from}p {
+    width: (@from * 1%);
+  }
+
+  .vw@{from},
+  .@{from}vw {
+    width: (@from * 1vw);
+  }
+
+
+  .h@{from}p {
+    height: (@from * 1%);
+  }
+
+  .vh@{from},
+  .@{from}vh {
+    height: (@from * 1vh);
+  }
+
+  .loopCreateUnit(@from + 5)
+}
+
+
+.loopCreateGap(@i: 0) when (@i =< 10) {
+  @res: @i * 5;
+
+  .m-@{i},
+  .m@{res} {
+    margin: @i * @gap !important;
+  }
+
+  .mt-@{i},
+  .mt@{res} {
+    margin-top: @i * @gap !important;
+  }
+
+  .mr-@{i},
+  .mr@{res} {
+    margin-right: @i * @gap !important;
+  }
+
+  .mb-@{i},
+  .mb@{res} {
+    margin-bottom: @i * @gap !important;
+  }
+
+  .ml-@{i},
+  .ml@{res} {
+    margin-left: @i * @gap !important;
+  }
+
+  .p-@{i},
+  .p@{res} {
+    padding: @i * @gap !important;
+  }
+
+  .pt-@{i},
+  .pt@{res} {
+    padding-top: @i * @gap !important;
+  }
+
+  .pr-@{i},
+  .pr@{res} {
+    padding-right: @i * @gap !important;
+  }
+
+  .pb-@{i},
+  .pb@{res} {
+    padding-bottom: @i * @gap !important;
+  }
+
+  .pl-@{i},
+  .pl@{res} {
+    padding-left: @i * @gap !important;
+  }
+
+  .loopCreateGap(@i + 1)
+}
+
+
+.loopCreate(1, 10);
+.loopCreate(15, 100, 5);
+
+.loopCreateUnit();
+.loopCreateGap();

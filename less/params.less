@@ -1,0 +1,118 @@
+@blue: #1983f6;
+@main-color: #b7252f;
+
+@black1: #303133;
+@black2: #606266;
+@black3: #909399;
+@black4: #c0c4cc;
+
+@white1: #f2f6fc;
+@white2: #ebeef5;
+@white3: #e4e7ed;
+@white4: #dcdfe6;
+
+@danger: #e94328;
+@danger1: rgba(233, 67, 40, .66);
+@danger2: rgba(233, 67, 40, .33);
+
+@success: #67c23a;
+@success1: #e1f3d8;
+@success2: #f0f9eb;
+
+@warning: #e6a23c;
+@warning1: #faecd8;
+@warning2: #fdf6ec;
+
+@unit: 10px; // unit for width & height
+@gap: 5px; // unit for margin & padding
+
+.oneline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.point {
+  cursor: pointer;
+  .no-select;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fw5 {
+  font-weight: 500;
+}
+
+.black {
+  color: #000;
+}
+
+.black1 {
+  color: @black1;
+}
+
+.black2 {
+  color: @black2;
+}
+
+.black3 {
+  color: @black3;
+}
+
+.black4 {
+  color: @black4;
+}
+
+.red {
+  color: @danger;
+}
+
+.green {
+  color: @success;
+}
+
+.orange {
+  color: @warning;
+}
+
+.blue {
+  color: @blue;
+}
+
+.mainColor {
+  color: @main-color;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.sl-scroll {
+  &::-webkit-scrollbar-button {
+    // 上下按钮
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // 内部滑块
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #999;
+    border-radius: 10px;
+    height: 20px;
+  }
+
+  &::-webkit-scrollbar {
+    // 整体
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    height: 14px;
+    width: 12px;
+  }
+}
